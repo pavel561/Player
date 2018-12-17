@@ -10,16 +10,21 @@ namespace MusicPlayer
     {
         static void Main(string[] args)
         {
-            
 
+            
             var player = new Player();
-            player.Volume = 20;
+            //player.Volume = 20;
+            player.VolumeChange(-101);
+
             player.Songs = GetSongsData();
             //TraceInfo(player);
 
             player.Play();
             player.VolumeUp();
+            player.VolumeUp();
             player.VolumeChange(25);
+            player.VolumeChange(25);
+            player.VolumeDown();
             player.VolumeDown();
             player.Stop();
 
@@ -34,6 +39,13 @@ namespace MusicPlayer
             var artist = new Artist();
             artist.Genre = "Rock";
             artist.Name = "AC/DC";
+
+            var artist2 = new Artist("Pink Floyd");
+            Console.WriteLine($"{artist2.Name}");
+            Console.WriteLine($"{artist2.Genre}");
+            var artist3 = new Artist("Iowa", "Pop");
+            Console.WriteLine($"{artist3.Name}");
+            Console.WriteLine($"{artist3.Genre}");
 
             var song = new Song()
             {
