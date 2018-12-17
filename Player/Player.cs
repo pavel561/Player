@@ -20,7 +20,7 @@ namespace MusicPlayer
             }
             else
             {
-                Console.WriteLine($"Volume is minimum");
+                Console.WriteLine($"Volume is maximum");
             }
             
         }
@@ -42,6 +42,7 @@ namespace MusicPlayer
             if((Volume+step<=100) || (Volume - step >=0))
             {
                 Volume += step;
+                Console.WriteLine($"Volume set to {Volume}");
             }
             else
             {

@@ -20,6 +20,7 @@ namespace MusicPlayer
             player.Play();
             player.VolumeUp();
             player.VolumeChange(25);
+            player.VolumeDown();
             player.Stop();
 
             Console.ReadLine();
